@@ -6,39 +6,14 @@ import org.apache.log4j.Logger;
 
 public class Main {
 
-  private static Logger logger = Logger.getLogger(Main.class);
-
-
-  /**
-   * A main method to run examples.
-   *
-   * @param args not used
-   */
   public static void main(String[] args) {
+    //Abstract Factory
 
-    // This configuration is for setting up the log4j properties file.
-    // It is better to set this using java program arguments.
-    // PropertyConfigurator.configure("log4j.properties");
-
-    // Let us create an object of the Main class.
-    Main m = new Main();
-
-    logger.info(m.doIt());
-
-    logger.trace("Trace Message!");
-    logger.debug("Debug Message!");
-    logger.info("Info Message!");
-    logger.warn("Warn Message!");
-    logger.error("Error Message!");
-    logger.fatal("Fatal Message!");
-
+    VIPCustomerFactory vipF = new VIPCustomerFactory(); //inst
+    Email email1 = vipF.createEmail("Alina", "12345@gmail.com"); //creates email1
+    System.out.println(email1.printEmail());
   }
 
 
-
-  private String doIt() {
-    Person student = new Person("John", "Doe");
-    return student.getLastName() + ',' + student.getLastName();
-  }
 
 }
