@@ -15,26 +15,23 @@ import org.apache.log4j.Logger;
 public class Main {
 
   public static void main(String[] args) {
-    //Abstract Factory
+    //Executes the createEmail() method for each type of customer
 
-    VIPCustomerFactory vipF = new VIPCustomerFactory(); //inst
-    Email email1 = vipF.createEmail("Alina", "alina@gmail.com"); //creates email1
+    VIPCustomerFactory vipF = new VIPCustomerFactory();
+    Email email1 = vipF.createEmail("Alina", "alina@gmail.com");
     System.out.println(email1.printEmail());
 
-    ReturningCustomerFactory returningF = new ReturningCustomerFactory(); //inst
-    Email email2 = returningF.createEmail("Lesley", "lesley@gmail.com"); //creates email1
+    ReturningCustomerFactory returningF = new ReturningCustomerFactory();
+    Email email2 = returningF.createEmail("Lesley", "lesley@gmail.com");
     System.out.println(email2.printEmail());
 
-    NewCustomerFactory newF = new NewCustomerFactory(); //inst
-    Email email3 = newF.createEmail("Tahsin", "tahsin@gmail.com"); //creates email1
+    NewCustomerFactory newF = new NewCustomerFactory();
+    Email email3 = newF.createEmail("Tahsin", "tahsin@gmail.com");
     System.out.println(email3.printEmail());
 
-    BusinessCustomerFactory businessF = new BusinessCustomerFactory(); //inst
-    Email email4 = businessF.createEmail("Maeve", "maeve@gmail.com"); //creates email1
+    BusinessCustomerFactory businessF = new BusinessCustomerFactory();
+    Email email4 = businessF.createEmail("Maeve", "maeve@gmail.com");
     System.out.println(email4.printEmail());
 
-
   }
-
-
 }

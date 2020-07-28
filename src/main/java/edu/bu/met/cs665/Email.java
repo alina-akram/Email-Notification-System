@@ -5,12 +5,10 @@
  * Assignment #3
  * July 27, 2020
  */
-
-
 package edu.bu.met.cs665;
 
 public abstract class Email {
-    //AC
+    //Abstract Class that other customer classes inherit from
     protected String customerEmail;
     protected String emailBody;
     protected String emailSubject;
