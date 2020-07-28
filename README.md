@@ -1,3 +1,24 @@
+# Implementation
+
+• How flexible is your implementation?
+
+This application creates and sends out appropriate emails to a specific type of customer at runtime based on type. Due to the simple implementation the Main.java file demonstrates specific customers getting added to each customer type and the factories send out the appropriate email. 
+
+
+• How is the simplicity and understandability of your implementation?
+
+It's a flexibile implementation where new types of customers can be made given the subclass extends the Email class. New Email types can be made if it implements the EmailFactory. It is a very straightforward implementation. As of now each instance of a customer is instantiated under each factory implementation. The Email.java file gets the necessary details which are passed into the respective factory (implementing EmailFactory) which generates the appropriate email.
+Future implementation will have a more extensive customer registration process which can be filtered by type during runtime. 
+
+
+• How you avoided duplicated code?
+Due to the simple implementation, we were able to limit duplicate code to a degree. 
+
+
+Github Repo Link: https://github.com/alina-akram/met-cs665-assignment-3-alina-akram
+
+
+
 # Project Template
 
 This is a Java Maven Project Template
